@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Cria uma nova imagem
     const img = document.createElement("img");
-    img.setAttribute("src", "./Images/9v7uuh8f64091.png"); // Caminho da imagem que vai passear
+    img.setAttribute("src", "/images/9v7uuh8f64091.png"); // Caminho da imagem que vai passear
     img.setAttribute("id", "jinx-walker");
     img.style.position = "fixed";
     img.style.width = "200px";
