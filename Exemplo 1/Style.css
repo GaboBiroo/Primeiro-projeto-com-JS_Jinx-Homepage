@@ -1,0 +1,167 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(90deg, #1b0044, #9100a1);
+  color: #fff;
+  min-height: 100vh;
+}
+
+/* Logo */
+.header {
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.logo {
+  font-size: 2rem; /* Aumentado para maior destaque */
+  color: #C71585;
+  letter-spacing: 2px;
+}
+
+.logo span {
+  display: block;
+  font-size: 1rem; /* Levemente maior para melhor leitura */
+  color: #011efe;
+}
+
+/* Layout principal */
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+/* Lado esquerdo */
+.left-section {
+  flex: 1;
+  max-width: 45%; /* Ajustado para melhor proporção */
+}
+
+.title {
+  font-size: 3.5rem; /* Maior para chamar mais atenção */
+  font-weight: 900;
+  line-height: 1.3; /* Melhor espaçamento entre linhas */
+  margin-bottom: 25px;
+  color: #011efe;
+}
+
+.trailer-btn {
+  background-color: #ff2d94;
+  color: white;
+  border: none;
+  padding: 16px 32px; /* Maior para melhor usabilidade */
+  font-size: 1.1rem; /* Levemente maior */
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-bottom: 20px;
+}
+
+.trailer-btn:hover {
+  background-color: #e60073;
+}
+
+.netflix {
+  font-size: 1rem; /* Levemente maior */
+  margin-bottom: 30px;
+}
+
+.netflix span {
+  color: red;
+  font-weight: bold;
+}
+
+.thumbnail img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px; /* Maior espaçamento */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.thumbnail p {
+  font-size: 1rem; /* Maior para melhor leitura */
+  text-align: center;
+}
+
+/* Lado direito */
+.right-section {
+  flex: 1;
+  max-width: 50%; /* Ajustado para melhor proporção */
+  position: relative;
+}
+
+.jinx-art {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.jinx-art img {
+  width: 100%;
+  max-width: 350px; /* Maior para mais destaque */
+  filter: drop-shadow(0 0 10px #ff00ff);
+}
+
+.jinx-quote {
+  font-style: italic;
+  color: #ff66c4;
+  margin-top: 10px;
+  font-size: 1.1rem; /* Levemente maior */
+  max-width: 350px; /* Ajustado para acompanhar a imagem */
+}
+
+.character-info {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 25px; /* Maior para mais espaçamento interno */
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+.character-info h3 {
+  font-size: 1.8rem; /* Maior para mais destaque */
+  margin-bottom: 15px;
+  color: #011efe;
+}
+
+.character-info p {
+  font-size: 1rem; /* Levemente maior */
+  line-height: 1.6; /* Melhor espaçamento entre linhas */
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.caitlyn-img {
+  width: 100%;
+  max-width: 180px; /* Maior para mais visibilidade */
+  border-radius: 10px;
+  display: block;
+}
+
+.bolha {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ff66c4;
+  animation: subir 1.5s ease-out forwards;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes subir {
+  to {
+    transform: translateY(-60px) scale(0.5);
+    opacity: 0;
+  }
+}
+  
+
+  
+}
