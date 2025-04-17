@@ -41,17 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mover(); // inicia movimento
 
       // Trailer interativo com evento
-const btnTrailer = document.querySelector(".trailer-btn");
-btnTrailer.addEventListener("click", () => {
-  const paragrafo = document.createElement("p");
-  paragrafo.textContent = "Prepare-se para a explosão de cores com Jinx!";
-  paragrafo.style.color = "#ff66c4";
-  paragrafo.style.marginTop = "10px";
-  btnTrailer.parentNode.appendChild(paragrafo);
-  setTimeout(() => {
-    paragrafo.style.opacity = "0.3";
-  }, 4000);
-});
+
 
 // Efeito evitar mouse em CAITLYN
 const personagem = document.querySelector(".character-info");
@@ -64,16 +54,20 @@ personagem.addEventListener("mouseleave", () => {
 });
 
 // Criação de bolhas ao mover mouse
-const area = document.querySelector(".right-section");
-area.addEventListener("mousemove", (e) => {
+document.addEventListener("mousemove", (e) => {
   const bolha = document.createElement("div");
   bolha.classList.add("bolha");
-  bolha.style.left = e.clientX + "px";
-  bolha.style.top = e.clientY + "px";
+
+  // Usa pageX/pageY para considerar scroll
+  bolha.style.left = e.pageX + "px";
+  bolha.style.top = e.pageY + "px";
+
   document.body.appendChild(bolha);
+
+  // Tempo de vida menor (mais rastro, menos bolhas acumuladas)
   setTimeout(() => {
     bolha.remove();
-  }, 1500);
+  }, 400);
 });
 
     });
